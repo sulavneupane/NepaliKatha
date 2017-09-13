@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_screen"
+    tools:context="com.nepalicoders.nepalikatha.activities.SplashScreen">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="16dp"
+        android:alpha="0.8"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/logo"
+        android:layout_alignParentRight="true"
+        android:background="#88FFFFFF"
+        android:fontFamily="sans-serif-light"
+        android:padding="8dp"
+        android:text="@string/copyright"
+        android:textColor="@color/colorPrimary" />
+
+    <com.github.rahatarmanahmed.cpv.CircularProgressView
+        android:id="@+id/loading"
+        android:layout_marginBottom="8dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/welcome_view"
+        android:layout_centerHorizontal="true"
+        app:cpv_animAutostart="true"
+        app:cpv_color="@color/colorAccent"
+        app:cpv_indeterminate="true"
+        app:cpv_thickness="2dp" />
+
+    <LinearLayout
+        android:id="@+id/welcome_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#80000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/welcome_text"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</RelativeLayout>

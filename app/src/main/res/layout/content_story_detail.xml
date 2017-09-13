@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.nepalicoders.nepalikatha.activities.PoemDetailActivity"
+    tools:showIn="@layout/activity_story_detail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/vertical_margin_medium"
+            android:paddingLeft="@dimen/horizontal_margin_medium"
+            android:paddingRight="@dimen/horizontal_margin_medium"
+            android:paddingTop="@dimen/vertical_margin_medium">
+
+            <TextView
+                android:id="@+id/poem_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/vertical_margin_small"
+                android:fontFamily="serif"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryText"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/poem_writer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/poem_title"
+                android:fontFamily="serif"
+                android:gravity="right"
+                android:textColor="@color/colorPrimaryText"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/poem_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/poem_writer"
+                android:layout_marginTop="@dimen/vertical_margin_medium"
+                android:fontFamily="serif"
+                android:textColor="@color/colorPrimaryText"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/poem_published_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/poem_content"
+                android:layout_marginBottom="@dimen/vertical_margin_xsmall"
+                android:layout_marginTop="@dimen/vertical_margin_medium"
+                android:fontFamily="serif"
+                android:gravity="right"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/poem_submitted_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/poem_published_date"
+                android:paddingBottom="64dp"
+                android:fontFamily="serif"
+                android:gravity="right"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom|center">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            ads:adUnitId="@string/banner_ad_unit_id"
+            ads:adSize="BANNER">
+
+        </com.google.android.gms.ads.AdView>
+
+    </LinearLayout>
+
+</RelativeLayout>
